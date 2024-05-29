@@ -18,7 +18,7 @@ $ npm init -y
 ```
 $ npm install express cors mongoose
 ```
-## 개발이 도움되는 툴
+## 개발에 도움되는 툴
 * nodemon
 
 `nodemon`은 프로젝트 파일이 저장되면 프로젝트를 재시작 해준다. 그러면 수정된 코드를 바로바로 테스트 해볼 수 있다.
@@ -26,7 +26,7 @@ $ npm install express cors mongoose
 ```
 $ npm install nodemon --save-dev
 ```
-`--save-dev`옵션은 pacakge.json에 개발용도라는 것을 명시해준다.
+`--save-dev`옵션은 `pacakge.json`에 개발용도라는 것을 명시해준다.
 
 ## 개발 전 package.json 설정
 아래와 같이 타입과 시작 설정을 넣어준다:
@@ -40,11 +40,9 @@ $ npm install nodemon --save-dev
     "test": "echo \"Error: no test specified\" && exit 1"
 },
 ```
-`"type":"module"`은 ES6에서 도입된 import를 사용할 수 있게 해준다. 관련해서 자세한 사항은 아래 링크를 참고한다.
-
-[require vs import](https://inpa.tistory.com/entry/NODE-%F0%9F%93%9A-require-%E2%9A%94%EF%B8%8F-import-CommonJs%EC%99%80-ES6-%EC%B0%A8%EC%9D%B4-1)
-
-스크립트에는 start와 dev를 추가 설정해주었다. dev로 실행하면 nodemon을 이용하여 프로그램이 실행된다:
+`"type":"module"`은 `ES6`에서 도입된 `import`를 사용할 수 있게 해준다. 관련해서 자세한 사항은 [require vs import](https://inpa.tistory.com/entry/NODE-%F0%9F%93%9A-require-%E2%9A%94%EF%B8%8F-import-CommonJs%EC%99%80-ES6-%EC%B0%A8%EC%9D%B4-1)을 참고한다.
+`scripts`에는 `start`와 `dev`를 추가 설정해주었다. `dev`로 실행하면 `nodemon`을 이용하여 프로그램이 실행된다:
 ```
 $ npm run dev
 ```
+이럴 경우 위에서 설명한 것과 같이 프로젝트의 파일이 갱신(저장)되면 `nodemon`이 프로젝트를 재시작 햐여 바로 테스트 가능하게 해준다.
